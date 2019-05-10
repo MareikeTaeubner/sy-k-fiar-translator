@@ -7,11 +7,17 @@ var stemmer = require("stemmer");
  * @param {string} phrase the phrase in Sy'k Fiar
  * @returns the translated phrase
  */
-function translateFromSf(phrase) {
+export async function translateFromSf(phrase) {
   const words = phrase.split(" ");
-  const translated = words
-    .map(word => findTranslation(word))
-    .map(word => (word === undefined ? "<unknown>" : word));
+  const translated = [];
+  for (const word of words) {
+    let translation = await findTranslation(word);
+    if (!translation) {
+      translation = "<unknown>";
+    }
+    translated.push(translation);
+  }
+
   return translated.join(" ");
 }
 
@@ -21,12 +27,15 @@ function translateFromSf(phrase) {
  * @param {string} phrase the english phrase
  * @returns the translated phrase
  */
-function translateFromEn(phrase) {
+export async function translateFromEn(phrase) {
   const words = phrase.split(" ");
-  const translated = words
-    .map(word => stemmer(word))
-    .map(word => getSf(word))
-    .map(word => (word === undefined ? "<unknown>" : word));
+  let translated = await Promise.all(
+    words.map(word => stemmer(word)).map(word => getSf(word))
+  );
+
+  translated = translated.map(word =>
+    word === undefined ? "<unknown>" : word
+  );
 
   return translated.join(" ");
 }
@@ -35,20 +44,15 @@ function translateFromEn(phrase) {
  * Translates the given word to english.
  *
  * @param {string} word the word in Sy'k Fiar
- * @returns the translated word or *undefined* if the given word was not known
+ * @returns {Promise<string>} the translated word or *undefined* if the given word was not known
  */
-function findTranslation(word) {
-  let trans = getEn(word);
+async function findTranslation(word) {
+  let trans = await getEn(word);
   //remove possible adjective suffix and try again
   if (!trans) {
     const withoutSuffix = word.substring(0, word.length - 1);
-    trans = getEn(withoutSuffix);
+    trans = await getEn(withoutSuffix);
   }
 
   return trans;
 }
-
-module.exports = {
-  translateFromSf,
-  translateFromEn
-};
