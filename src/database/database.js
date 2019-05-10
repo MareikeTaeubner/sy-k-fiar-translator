@@ -13,12 +13,16 @@ db.defaults({ translations: [] }).write();
  * @param {string} translation english translation of the word
  */
 function addWord(word, translation) {
-  db.get("translations")
-    .push({
-      sf: word,
-      en: translation
-    })
-    .write();
+  const translations = db.get("translations");
+
+  if (translations.findIndex({ sf: word }).value() === -1) {
+    translations
+      .push({
+        sf: word,
+        en: translation
+      })
+      .write();
+  }
 }
 
 /**
