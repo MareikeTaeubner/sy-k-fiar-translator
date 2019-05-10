@@ -1,4 +1,5 @@
-const { getEn, addWord } = require("./database/database");
+const { getEn, getSf } = require("./database/database");
+var stemmer = require("stemmer");
 
 /**
  * Translates the given phrase to english.
@@ -14,8 +15,21 @@ function translateFromSf(phrase) {
   return translated.join(" ");
 }
 
-addWord("tia", "[p]");
-console.log(translateFromSf("fyre est rhyn tia raifa"));
+/**
+ * Translates the given english phrase to Sy'k Fiar.
+ *
+ * @param {string} phrase the english phrase
+ * @returns the translated phrase
+ */
+function translateFromEn(phrase) {
+  const words = phrase.split(" ");
+  const translated = words
+    .map(word => stemmer(word))
+    .map(word => getSf(word))
+    .map(word => (word === undefined ? "<unknown>" : word));
+
+  return translated.join(" ");
+}
 
 /**
  * Translates the given word to english.
@@ -35,5 +49,6 @@ function findTranslation(word) {
 }
 
 module.exports = {
-  translateFromSf
+  translateFromSf,
+  translateFromEn
 };
