@@ -18,7 +18,7 @@ function TranslateGui() {
 
   return (
     <div>
-      <h1>Translate English -> Sy'k Fiar</h1>
+      <h1 style={{ color: "pink" }}>Translate English -> Sy'k Fiar</h1>
       <form onSubmit={handleSubmit}>
         <label>English phrase:</label>
         <input
