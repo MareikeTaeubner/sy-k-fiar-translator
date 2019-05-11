@@ -1,10 +1,9 @@
-const low = require("lowdb");
-const FileSync = require("lowdb/adapters/FileSync");
+import low from "lowdb";
+import { adapter } from "./lowAdapter";
 
-const adapter = new FileSync("db.json");
 const db = low(adapter);
 
-db.defaults({ translations: [] }).write();
+// db.defaults({ translations: [] }).write();
 
 /**
  * Adds the given word and its translation to the database.
@@ -12,11 +11,12 @@ db.defaults({ translations: [] }).write();
  * @param {string} word word in Sy'k Fiar
  * @param {string} translation english translation of the word
  */
-function addWord(word, translation) {
-  const translations = db.get("translations");
+export async function addWord(word, translation) {
+  const db2 = await db;
+  const translations = db2.get("translations");
 
   if (translations.findIndex({ sf: word }).value() === -1) {
-    translations
+    await translations
       .push({
         sf: word,
         en: translation
@@ -30,10 +30,11 @@ function addWord(word, translation) {
  * or *undefined* if the word was not found.
  *
  * @param {string} word word in Sy'k Fiar
- * @returns {string} the english translation or *undefined* if nothing was found
+ * @returns {Promise<string>} the english translation or *undefined* if nothing was found
  */
-function getEn(word) {
-  const dataset = db
+export async function getEn(word) {
+  const db2 = await db;
+  const dataset = db2
     .get("translations")
     .find({
       sf: word
@@ -47,10 +48,11 @@ function getEn(word) {
  * Returns the Sy'k Fiar translation of the given word from the database
  * or *undefined* if the word was not found.
  * @param {string} word the word in english
- * @returns {string} the Sy'k Fiar translation or *undefined* if nothing was found
+ * @returns {Promise<string>} the Sy'k Fiar translation or *undefined* if nothing was found
  */
-function getSf(word) {
-  const dataset = db
+export async function getSf(word) {
+  const db2 = await db;
+  const dataset = db2
     .get("translations")
     .find({
       en: word
@@ -59,9 +61,3 @@ function getSf(word) {
 
   return dataset ? dataset.sf : undefined;
 }
-
-module.exports = {
-  addWord,
-  getEn,
-  getSf
-};
