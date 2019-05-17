@@ -47,6 +47,7 @@ export async function translateFromEn(phrase) {
  * @returns {Promise<string>} the translated word or *undefined* if the given word was not known
  */
 async function findTranslation(word) {
+  word = word.toLowerCase();
   let trans = await getEn(word);
   //remove possible adjective suffix and try again
   if (!trans) {
