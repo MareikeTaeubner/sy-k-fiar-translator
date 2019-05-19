@@ -4,14 +4,19 @@ import AddWord from "./AddWord";
 import TranslateGui from "./TranslateGui";
 import Header from "./Header";
 import Menu from "./Menu";
+import { BrowserRouter, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Menu />
-      <AddWord />
-      <TranslateGui />
+      <BrowserRouter>
+        <Header />
+        <Menu />
+        <main>
+          <Route path="/" exact component={AddWord} />
+          <Route path="/translate" component={TranslateGui} />
+        </main>
+      </BrowserRouter>
     </div>
   );
 }

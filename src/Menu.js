@@ -1,27 +1,18 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 function Menu() {
   return (
     <nav>
-      <Item text="Home" active />
-      <Item text="En -> SF" />
-      <Item text="SF -> En" />
-      <Item text="Add" />
+      <NavLink to="/" exact>
+        Home
+      </NavLink>
+      <NavLink to="/translate">En -> SF</NavLink>
+      <NavLink to="/translate">SF -> En</NavLink>
+      <NavLink to="/" exact>
+        Add
+      </NavLink>
     </nav>
-  );
-}
-
-/**
- *
- * @param {Object} props
- * @param {string} props.text
- * @param {boolean} [props.active]
- */
-function Item({ text, active = false }) {
-  return (
-    <a href="#" className={active ? "active" : ""}>
-      {text}
-    </a>
   );
 }
 

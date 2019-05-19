@@ -53,3 +53,9 @@ nav a.active {
 nav a:hover {
   filter: brightness(90%);
 }
+
+main {
+  margin-top: 100px;
+  margin-left: 150px;
+  margin-right: 150px;
+}
