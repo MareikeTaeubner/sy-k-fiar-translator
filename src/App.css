@@ -5,14 +5,23 @@
   font-family: roboto;
 }
 
-.header {
+header {
   height: 160px;
   background-color: #689550;
   font-family: "Roboto";
+  font-size: 60px;
+  line-height: 70px;
+  font-weight: bold;
   color: white;
-  fill: white;
 
   display: flex;
-  justify-content: center;
   align-items: center;
+}
+
+.logo {
+  fill: white;
+  height: 110px;
+  width: 110px;
+  margin-right: 100px;
+  margin-left: 200px;
 }
