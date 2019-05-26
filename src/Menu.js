@@ -9,7 +9,7 @@ function Menu() {
       </NavLink>
       <NavLink to="/en-to-sf">En -> SF</NavLink>
       <NavLink to="/sf-to-en">SF -> En</NavLink>
-      <NavLink to="/" exact>
+      <NavLink to="/add" exact>
         Add
       </NavLink>
     </nav>

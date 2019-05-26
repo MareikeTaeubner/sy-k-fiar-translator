@@ -6,6 +6,7 @@ import Menu from "./Menu";
 import { BrowserRouter, Route } from "react-router-dom";
 import { translateFromEn, translateFromSf } from "./translate";
 import TranslateForm from "./TranslateForm";
+import Home from "./Home";
 
 function App() {
   return (
@@ -14,9 +15,10 @@ function App() {
         <Header />
         <Menu />
         <main>
-          <Route path="/" exact component={AddWord} />
+          <Route path="/" exact component={Home} />
           <Route path="/en-to-sf" component={EnToSf} />
           <Route path="/sf-to-en" component={SfToEn} />
+          <Route path="/add" component={AddWord} />
         </main>
       </BrowserRouter>
     </div>
