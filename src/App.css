@@ -1,33 +1,114 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
 .App {
+  font-family: "Roboto";
+}
+
+header {
+  height: 160px;
+  background-color: #689550;
+  font-size: 60px;
+  line-height: 70px;
+  font-weight: bold;
+  color: white;
+
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  fill: white;
+  height: 110px;
+  width: 110px;
+  margin-right: 100px;
+  margin-left: 200px;
+}
+
+nav {
+  height: 100px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 10px;
+  display: flex;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+nav a {
+  width: 220px;
+  border-right: 1px solid #689550;
+  display: block;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 47px;
+  text-decoration: none;
+  padding: 25px;
+  color: #689550;
+  background-color: white;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+nav a.active {
+  background-color: #c0de9e;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+nav a:hover {
+  filter: brightness(90%);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+main {
+  margin-top: 100px;
+  margin-left: 150px;
+  margin-right: 150px;
+  color: #689550;
+}
+
+.home {
+  text-align: justify;
+  max-width: 900px;
+}
+
+input[type="text"] {
+  border: 1px solid #689550;
+  box-sizing: border-box;
+  border-radius: 10px;
+  width: 411px;
+  height: 56px;
+  padding-left: 10px;
+  color: #689550;
+  font-weight: bold;
+  margin-right: 12px;
+  margin-bottom: 20px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-width: 2px;
+}
+
+::placeholder {
+  color: #689550;
+  font-weight: normal;
+}
+
+input[type="submit"] {
+  width: 181px;
+  height: 56px;
+  border-radius: 10px;
+  background-color: #689550;
+  border: 1px solid #689550;
+  color: white;
+  font-weight: bold;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+input[type="submit"]:focus {
+  outline: none;
+}
+
+input[type="submit"]:hover {
+  filter: brightness(90%);
+  cursor: pointer;
+}
+
+h1 {
+  margin-bottom: 50px;
 }
