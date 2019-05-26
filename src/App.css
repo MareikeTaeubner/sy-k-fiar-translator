@@ -63,4 +63,51 @@ main {
 
 .home {
   text-align: justify;
+  max-width: 900px;
+}
+
+input[type="text"] {
+  border: 1px solid #689550;
+  box-sizing: border-box;
+  border-radius: 10px;
+  width: 411px;
+  height: 56px;
+  padding-left: 10px;
+  color: #689550;
+  font-weight: bold;
+  margin-right: 12px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-width: 2px;
+}
+
+::placeholder {
+  color: #689550;
+  font-weight: normal;
+}
+
+input[type="submit"] {
+  width: 181px;
+  height: 56px;
+  border-radius: 10px;
+  background-color: #689550;
+  border: 1px solid #689550;
+  color: white;
+  font-weight: bold;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+input[type="submit"]:focus {
+  outline: none;
+}
+
+input[type="submit"]:hover {
+  filter: brightness(90%);
+  cursor: pointer;
+}
+
+h1 {
+  margin-bottom: 50px;
 }

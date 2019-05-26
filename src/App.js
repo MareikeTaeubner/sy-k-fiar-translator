@@ -31,7 +31,7 @@ function EnToSf() {
   return (
     <div>
       <TranslateForm
-        header="English -> Sy'k Fiar"
+        header="Translate from English to Sy'k Fiar"
         language="English"
         translate={translateFromEn}
       />
@@ -43,7 +43,7 @@ function SfToEn() {
   return (
     <div>
       <TranslateForm
-        header="Sy'k Fiar -> English"
+        header="Translate from Sy'k Fiar to English"
         language="Sy'k Fiar"
         translate={translateFromSf}
       />

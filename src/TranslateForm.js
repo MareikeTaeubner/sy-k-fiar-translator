@@ -19,14 +19,14 @@ function TranslateForm({ header, language, translate }) {
     <div>
       <h1>{header}</h1>
       <form onSubmit={handleSubmit}>
-        <label>{language} phrase:</label>
+        <p>Insert the {language} phrase you want to translate</p>
         <input
           type="text"
           placeholder={`insert ${language} phrase`}
           onChange={e => setPhrase(e.target.value)}
           value={phrase}
         />
-        <input type="submit" value="translate" />
+        <input type="submit" value="Translate" />
       </form>
       <div>{result}</div>
     </div>
