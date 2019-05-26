@@ -21,14 +21,15 @@ function AddWord() {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <label>New word in Sy'k Fiar:</label>
+        <h1>Add a new word to the database</h1>
+        <p>Insert the new word in Sy'k Fiar</p>
         <input
           type="text"
           placeholder="insert new word"
           onChange={e => setWord(e.target.value)}
           value={word}
         />
-        <label>English Translation:</label>
+        <p>Insert the English translation</p>
         <input
           type="text"
           placeholder="insert translation"
