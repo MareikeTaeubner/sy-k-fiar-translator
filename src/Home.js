@@ -18,8 +18,11 @@ function Home() {
     })().catch(console.error);
   }, []);
 
-  if (loaded) return <Markdown>{text}</Markdown>;
-  else return <p>loading...</p>;
+  return (
+    <div className="home">
+      {loaded ? <Markdown>{text}</Markdown> : <p>loading...</p>}
+    </div>
+  );
 }
 
 export default Home;
