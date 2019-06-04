@@ -2,18 +2,23 @@
 
 .App {
   font-family: "Roboto";
+  display: grid;
+  grid-template-areas:
+    "header"
+    "menu"
+    "content";
 }
 
 header {
   height: 160px;
   background-color: #689550;
   font-size: 60px;
-  line-height: 70px;
   font-weight: bold;
   color: white;
 
   display: flex;
   align-items: center;
+  grid-area: header;
 }
 
 .logo {
@@ -30,6 +35,7 @@ nav {
   margin-bottom: 10px;
   display: flex;
   text-align: center;
+  grid-area: menu;
 }
 
 nav a {
@@ -54,11 +60,16 @@ nav a:hover {
   filter: brightness(90%);
 }
 
+nav a.mobile {
+  display: none;
+}
+
 main {
   margin-top: 100px;
   margin-left: 150px;
   margin-right: 150px;
   color: #689550;
+  grid-area: content;
 }
 
 .home {
@@ -111,4 +122,83 @@ input[type="submit"]:hover {
 
 h1 {
   margin-bottom: 50px;
+}
+
+.home-icon {
+  fill: #689550;
+  width: 40px;
+  height: 40px;
+}
+
+nav a.active .home-icon {
+  fill: white;
+}
+
+@media screen and (max-width: 1024px) {
+  .App {
+    grid-template-areas:
+      "header"
+      "content";
+    overflow-y: scroll;
+  }
+
+  .add {
+    display: none;
+  }
+
+  nav {
+    box-shadow: unset;
+    position: fixed;
+    bottom: 0;
+    margin-bottom: unset;
+    height: 76px;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+
+  nav a {
+    display: none;
+    width: 33.4%;
+    border-top: 1px solid #689550;
+    padding: 15px;
+  }
+
+  nav a.mobile {
+    display: block;
+  }
+
+  nav a.mobile:last-child {
+    border-right: unset;
+  }
+  main {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 40px;
+    margin-bottom: 100px;
+  }
+
+  header {
+    font-size: 40px;
+  }
+
+  .logo {
+    margin: 35px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  form p {
+    display: none;
+  }
 }
