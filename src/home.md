@@ -1,11 +1,69 @@
-# Home
+# Sy'k Fiar
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac neque ut ipsum condimentum tincidunt. Etiam dapibus, tortor sit amet tristique laoreet, lorem metus bibendum quam, ac gravida eros mi eu lorem. Sed eget leo vel nisi consequat maximus at eu lectus. Quisque in blandit urna. Donec porttitor, elit et convallis aliquam, tellus turpis semper lacus, non sodales orci eros ac arcu. Suspendisse potenti. Nullam a tellus hendrerit, molestie lectus ut, consequat enim. Curabitur volutpat luctus urna non posuere. Morbi blandit scelerisque urna quis vehicula.
+Sy'k Fiar is an ancient language in the fictional world Rhyn, that was spoken by humans and magic beings alike before the Shattering. It is also known as the gods tongue as the user is able to embed magic into the words. After the Shattering however, it has lost its significance. Most humans now speak the common language while Sy'k Fiar is only known in academic circles and the few populations of magical creatures that survived the Shattering.
 
-Aliquam et massa eu ipsum tincidunt egestas eu ut eros. Vestibulum dictum luctus erat eget dictum. Nulla venenatis venenatis turpis. Nunc at nunc odio. Donec semper leo ante, non molestie risus rhoncus tristique. Maecenas ultricies odio ut rhoncus lobortis. Proin justo ante, volutpat nec gravida in, tincidunt a mi. Nunc gravida blandit ullamcorper. Vestibulum commodo commodo maximus.
+# About This Translator
 
-Sed porta leo malesuada, dapibus diam sit amet, tincidunt elit. Quisque iaculis elit nec urna feugiat tempus. Vestibulum cursus maximus neque. Nullam ac accumsan ex. Vivamus posuere risus et suscipit vestibulum. Donec scelerisque ligula leo, eu luctus sapien tempus ac. Suspendisse efficitur enim neque, eu sollicitudin orci dictum blandit.
+This translator is a tool to support translating between English and Sy'k Fiar by searching the literal translation for the given words like a dictionary.
 
-Fusce pulvinar imperdiet interdum. Vestibulum ullamcorper porttitor est at venenatis. In vitae feugiat ligula. Cras bibendum sem a efficitur dapibus. Fusce quis purus sit amet erat iaculis pharetra sit amet hendrerit lacus. Cras quis porttitor ipsum. Pellentesque pretium felis sollicitudin, posuere velit maximus, viverra risus. Cras ut neque at orci viverra consectetur. Fusce est est, egestas malesuada lectus eget, luctus pulvinar nunc. Ut vitae euismod justo. Nullam maximus luctus blandit. Pellentesque eu urna commodo, mattis purus nec, tristique nibh. Nam ac rhoncus est.
+In contrast to sophisticated translators for real languages, this tool does not attempt to apply grammar or other language features - at all. It is expected that the user applies the language rules as described below to form a real sentence.
 
-Quisque feugiat, sem ut auctor rhoncus, augue nisi mattis massa, a dignissim lacus mi volutpat magna. Sed tincidunt orci vitae felis iaculis, vel posuere ante rutrum. Aliquam lacinia nulla tortor, sed pellentesque felis convallis nec. Nunc euismod neque lorem, eget cursus justo tincidunt ac. Suspendisse dictum turpis nulla, vel iaculis risus pretium et. Donec rhoncus ante ac lectus vulputate dictum. Sed luctus mi laoreet, dapibus eros nec, condimentum mauris. Nullam ac lorem justo. Praesent ullamcorper justo elit, non iaculis ante laoreet nec. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam malesuada gravida magna et condimentum. Sed lobortis neque in quam pulvinar tristique. Phasellus turpis leo, fermentum non dignissim eget, faucibus nec nisl. Quisque finibus, sapien in pharetra tempor, tellus dui maximus neque, ut volutpat metus dui scelerisque leo.
+# Syntax
+
+## Simple Structure
+
+The simple sentences are built from a Subject and a Verb connected by the topic particle _est_:
+
+_Subject-est-Verb_
+
+Example:
+
+_fyre(S) est(P) raifa(V)_ - fire burn
+
+## Using an Object
+
+Is an Object present so is the structure like this:
+
+_Subject-est-Object-tia-Verb_
+
+Example:
+
+_fyre(S) est(P) rhyn(O) tia(P) raifa(V)_ - fire burn the earth
+
+To indicate what is done to the Object the particle _tia_ is used.
+
+## Plural
+
+The particle _phen_ signals that more than one person or object is meant.
+
+Example:
+
+_phen(P) noicta mora_ - black wings
+
+If a specific number of persons or objects is meant, the number is added before the particle phen.
+
+Example:
+
+_3 phen noicta mora_ - 3 black wings
+
+## Using Adjectives
+
+An Adjective stands directly before the Noun it describes. Depending on the Adjective a suffix may be added to allow a more smooth pronunciation. For example:
+
+_noict**a** mor**a**_ - black wing
+
+_noict_ ends on a consonant. An **a** is added to _noict_ because _mora_ ends on an **a**. So it is:
+
+_noict**a** mor**a**_
+
+But with another Noun it is:
+
+_noict**e** fyr**e**_ - black flame
+
+In case the Noun ends on a consonant it defaults to a **u** suffix:
+
+_noict**u** rhyn_
+
+An exception are Adjectives ending on a double consonant, which is indicated by an apostrophe: _sy'k_. In this case no suffix is used:
+
+_sy'k fiar_ - ancient tongue
