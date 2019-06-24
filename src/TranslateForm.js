@@ -28,7 +28,7 @@ function TranslateForm({ header, language, translate }) {
         />
         <input type="submit" value="Translate" />
       </form>
-      <div>{result}</div>
+      <output>{result}</output>
     </div>
   );
 }
