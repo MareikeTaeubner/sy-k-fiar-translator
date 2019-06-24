@@ -1,5 +1,7 @@
 # Sy'k Fiar
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/38cd15e6-b68d-411a-a27d-4093ff83fe39/deploy-status)](https://app.netlify.com/sites/serene-lichterman-d326de/deploys)
+
 Sy'k Fiar is an ancient language in the fictional world Rhyn, that was spoken by humans and magic beings alike before the Shattering. It is also known as the gods tongue as the user is able to embed magic into the words. After the Shattering however, it has lost its significance. Most humans now speak the common language while Sy'k Fiar is only known in academic circles and the few populations of magical creatures that survived the Shattering.
 
 # About This Translator
